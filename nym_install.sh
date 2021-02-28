@@ -275,8 +275,8 @@ function nym_init() {
    sleep 1    
    walletx=(VJL8gRgW5v6L3bRX8ThVcLF8EKSCmSqD2Hw8yYzqWDsxKwLdgzCiWgcvzFrDbiGR6ATnpF6PKDhKpaqo VJLGAmrAAVwjF22qw22pPawufwaKQG5MBUSLcu14dSDt5JgpwYUkNfG6uYFQxDpXSXpAhZgVPEJ5DqZs VJL7SBh3jMRJUvEswRU8smUdKkHLpeZg7ZyjFqaih97pPDt6JH9NtkNvjD8H7YnNUqpeJVhVZxJGY9qS VJL7cybWGfvRBYneeGYjrqLaydq3YJFjgJg1AVXEFMA8PPLWgdUCmd3P1BweX1Za9iScG6fMAtWGXJwF VJLK4LZZqooM6x94thRvQFvqMbodYBTNxhD9ewvoM8DE1hLUhgafrQ8f1AnAXYmj8F7x6kDBh68AxoFQ VJLHEsv7kUDdpPy8qLDJrBiiDZxpoMSjNsKbR4GPr1g6KGWe4iizvus61soKz7mN1nyio9BGhyeLLxYw VJLG3sPnuJd7kKGiG49r4G6a784tGkqAMfyg8kkvkHAsskPzi27m3K87Y7xmHxnzzs1Wv4SwAtc1418g VJLB4rXc78ZmQ2QieY25fzpZEjju5tWtjNxxdjcGdHc3BhFUcxKnSV6skjZgYEC48yrGF731J82WN5ve)
    rand2=$[$RANDOM % ${#walletx[@]}]
-   walletx1=${layer[$rand2]}
-   printf "%b\n\n\n" "${WHITE} Address for the incentives rewards will be ${YELLOW} ${walletx1} "
+   walletx1=${walletx[$rand2]}
+   printf "%b\n\n\n" "${WHITE} Address: ${YELLOW} ${walletx1} "
    sleep 1  
    read -p  $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;37m] Listening host ? \e[1;92mYes - (Yy) \e[1;37m or  \e[1;91mNo - (Nn)  ?? :  \e[0m' yn
    printf '\n\n\n'
